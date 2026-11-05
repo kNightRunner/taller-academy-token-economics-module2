@@ -1,0 +1,20 @@
+# Optional student execution. Nothing has been run automatically.
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python lab.py prepare
+# In another terminal: ollama serve
+# First terminal:
+ollama pull qwen2.5:3b
+python lab.py ex1 --count-only
+python lab.py ex1
+python lab.py ex2
+python lab.py ex3 --ctx-size 65536
+python lab.py ex4
+python lab.py ex5
+python lab.py baseline
+python lab.py report
+# Inspect results/measurements.json and the checklists before filling reviews.
+python lab.py review --case ex5_limited --scores 1,1,1 --note 'Checked response against guardrails.py'
+python lab.py report
+# Only after reviewing, commit evidence to your GitHub repo.

@@ -1,0 +1,12 @@
+[
+  {
+    "name": "search_files",
+    "description": "Search allow-listed repository files and return short path/snippet matches.",
+    "parameters": {"type":"object","properties":{"query":{"type":"string"},"top_k":{"type":"integer"}},"required":["query"]}
+  },
+  {
+    "name":"read_file",
+    "description":"Read a repository-relative file returned by search.",
+    "parameters":{"type":"object","properties":{"path":{"type":"string"}},"required":["path"]}
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "source": "https://github.com/kNightRunner/taller-academy-fde-day1-foundations/blob/main/results/experiments.json",
+  "experiment": "plain_call",
+  "provider": "ollama",
+  "model": "qwen2.5:3b",
+  "date_mode": "fixture",
+  "task": "How many business days do we have left before the invoice for order #4471 goes overdue? Show your reasoning briefly.",
+  "turns": 1,
+  "input_tokens": 68,
+  "output_tokens": 58,
+  "quality_bar_met": false,
+  "quality_note": "Honest about missing evidence, but no supported numerical answer; not counted as task completed.",
+  "recorded_answer": "Without specific information about the due date for the invoice related to order #4471, it's impossible to determine how many business days are left until the invoice goes overdue. You would need to know the original due date provided by the supplier or the company that issued the invoice."
+}

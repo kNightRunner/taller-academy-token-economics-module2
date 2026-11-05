@@ -1,0 +1,8 @@
+Review the attached Python code for (1) bugs, including off-by-one errors,
+(2) security issues, and (3) performance problems. Report only actionable
+findings as a short numbered list. Each finding must state severity, file/line,
+why it matters, and a minimal unified diff to fix it. Do not rewrite the file.
+If there are no findings in a category, say so briefly. Avoid introductory or
+closing summaries and unrelated advice.
+
+[the file goes here]

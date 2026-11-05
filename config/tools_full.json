@@ -1,0 +1,27 @@
+[
+  {
+    "name": "search_files",
+    "description": "Read-only search in an allow-listed local repository. Returns file paths and brief text matches; use it only for repository questions.",
+    "parameters": {"type":"object","properties":{"query":{"type":"string"},"top_k":{"type":"integer"}},"required":["query"]}
+  },
+  {
+    "name":"read_file",
+    "description":"Read a chosen allow-listed repository file after searching. Input path must be repository relative.",
+    "parameters":{"type":"object","properties":{"path":{"type":"string"}},"required":["path"]}
+  },
+  {
+    "name":"write_file",
+    "description":"Modify an arbitrary working copy file. Not required for questions that only inspect code.",
+    "parameters":{"type":"object","properties":{"path":{"type":"string"},"content":{"type":"string"}},"required":["path","content"]}
+  },
+  {
+    "name":"run_command",
+    "description":"Run a shell command in the development environment. Not required for read-only questions.",
+    "parameters":{"type":"object","properties":{"command":{"type":"string"}},"required":["command"]}
+  },
+  {
+    "name":"send_notification",
+    "description":"Send a message to an external recipient; not required for code inspection.",
+    "parameters":{"type":"object","properties":{"destination":{"type":"string"},"message":{"type":"string"}},"required":["destination","message"]}
+  }
+]

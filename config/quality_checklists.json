@@ -1,0 +1,51 @@
+{
+  "ex1": {
+    "question": "Which function in guardrails.py is the central gate that checks permissions and approval before an action executes?",
+    "criteria": [
+      "Names guarded_call and does not invent a different entry point",
+      "Describes permissions/validation before execution",
+      "Grounds the answer in the repository rather than unrelated tools"
+    ]
+  },
+  "ex2": {
+    "criteria": [
+      "Potential correctness bugs, including off-by-one errors, are assessed accurately",
+      "Actual security issues are assessed without invented vulnerabilities",
+      "Performance risks are assessed and fixes are actionable"
+    ]
+  },
+  "ex3": {
+    "question": "How is a model tool call converted into tool results, where is a refund action authorized or blocked, and which offline tests check that gate? Cite source filenames.",
+    "answer_key": "runtime.py translates model tool calls and tool results; guardrails.py guarded_call enforces allow-list, validation, run limits and human approval; tests/test_production.py checks blocking/approval and thresholds. All examples are synthetic.",
+    "criteria": [
+      "Identifies runtime.py as the model/tool message adapter",
+      "Identifies guarded_call in guardrails.py as the authorization/approval gate",
+      "Identifies tests/test_production.py as the offline verification and cites filenames"
+    ]
+  },
+  "ex4": {
+    "question": "List the three most recent commits with their abbreviated SHA and subject.",
+    "criteria": [
+      "Preserves three newest commits in the correct order",
+      "Preserves an unambiguous abbreviated SHA for each commit",
+      "Preserves each associated commit subject without unrelated diff noise"
+    ]
+  },
+  "ex5": {
+    "question": "Which Python function in guardrails.py enforces the authorization and approval gate before a refund can execute?",
+    "expected_answer": "guarded_call",
+    "criteria": [
+      "Names guarded_call correctly",
+      "Does not name a different function as the main approval gate",
+      "Answer is sufficient for the exact question asked"
+    ]
+  },
+  "baseline": {
+    "question": "How many business days are left before invoice #4471 becomes overdue in the original synthetic March 2026 training fixture?",
+    "criteria": [
+      "Derives a numeric day count from the verified invoice date and 30-day terms",
+      "Counts business days using the fixture clock and excluded holidays",
+      "Gives an accurate concise answer without inventing source facts"
+    ]
+  }
+}

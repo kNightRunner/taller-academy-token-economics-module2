@@ -1,0 +1,17 @@
+Hello! I hope you're doing well. I need your help with something important.
+You are an expert senior software engineer with 20 years of experience in
+Python, JavaScript, Java, Go, Rust and many other languages, and you are
+very good at reviewing code. Please review the code below. Please be
+thorough. Please be careful. It is very important that you are thorough
+and careful and that you do not miss anything.
+
+Please check for bugs. Please check for security issues. Please check for
+performance problems. Please also check for bugs again, especially
+off-by-one errors. Make sure you check everything.
+
+When you answer, please explain your reasoning in detail for every point,
+and give me a complete rewritten version of the whole file at the end so I
+can copy it. Also please give a summary at the beginning and a summary at
+the end. Thank you so much!
+
+[the file goes here]
